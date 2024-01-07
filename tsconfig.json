@@ -5,7 +5,8 @@
   //   "src/index.ts"
   // ],
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "types.d.ts"
   ],
   // TODO: READ ABOUT REFERENCES
   "compilerOptions": {
