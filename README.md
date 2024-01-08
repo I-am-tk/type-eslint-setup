@@ -35,3 +35,5 @@ console.log('bar');
 
 /* eslint-enable no-alert, no-console */
 ```
+
+Read about .eslintignore file
