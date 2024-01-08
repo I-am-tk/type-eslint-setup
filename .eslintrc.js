@@ -16,7 +16,7 @@ module.exports = {
     // },
     // By default eslint uses Espree parser
     // extends apply the rules specified in eslint:recommended, we can override it in rules
-    "extends": "eslint:recommended",
+    "extends": ["eslint:recommended", "airbnb"],
     "parserOptions": {
         // defautl sourceType is script making it module to support import and export
         "sourceType": "module"
@@ -26,5 +26,15 @@ module.exports = {
         "quotes": [2, "single", {
             "allowTemplateLiterals": true
         }]
-    }
+    },
+    // Overiding rule in test files, to allow console log
+    "overrides": [
+        {
+            "files": ["src/*.test.js"],
+            // "excludedFiles": "*.test.js",
+            "rules": {
+                "no-console": "off"
+            }
+        }
+    ]
 }
