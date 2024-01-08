@@ -9,7 +9,7 @@ module.exports = {
         // broswer env adds globals like console.log and lint
         "browser": true,
         // add languange features such as Map, Set...
-        "es2015": true,
+        "es2021": true,
         // add node features like require and module.export and path to global variables
         // "node": true
     },
@@ -24,14 +24,24 @@ module.exports = {
     "extends": ["eslint:recommended", "airbnb"],
     "parserOptions": {
         // defautl sourceType is script making it module to support import and export
-        "sourceType": "module"
+        "sourceType": "module",
+        // This is for the syntax???
+        "ecmaVersion": "latest",
+        // additional language features
+        "ecmaFeatures": {
+            "jsx": true,
+            "impliedStrict": true
+        }
     },
     "rules": {
-        // we are able to use these rules directly without having any plugin, because it is part of the eslint rules
+        // we are able to use these rules directly without having any plugin, because these are [built-in](https://eslint.org/docs/latest/rules/) rules
         "quotes": [2, "single", {
             "allowTemplateLiterals": true
-        }]
+        }],
     },
+    // disable adding inline rules
+    "noInlineConfig": true,
+    "reportUnusedDisableDirectives": true,
     // Overiding rule in test files, to allow console log
     "overrides": [
         {
