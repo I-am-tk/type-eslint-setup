@@ -2,6 +2,9 @@ module.exports = {
     // ESLint stops looking in parent folders once it finds a configuration with "root": true. Prevents Cascading.
     "root": true,
     "env": {
+        // LANGUAGE OPTIONS
+        // These environments are not mutually exclusive, so you can define more than one at a time.
+
         // Each environment brings with it a certain set of predefined global variables.
         // broswer env adds globals like console.log and lint
         "browser": true,
@@ -11,9 +14,11 @@ module.exports = {
         // "node": true
     },
     // Globals - the additional global variables your script accesses during execution.
-    // "globals": {
-
-    // },
+    "globals": {
+        "var1": "writable",
+        "var2": "readonly",
+        "Promise": "off"
+    },
     // By default eslint uses Espree parser
     // extends apply the rules specified in eslint:recommended, we can override it in rules
     "extends": ["eslint:recommended", "airbnb"],
