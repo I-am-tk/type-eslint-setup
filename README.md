@@ -11,3 +11,9 @@
 
 - Module: Module type of the output file 
 - Module Resolution: .cjs (commonJS file as require and exports has to be injected in global scope) .js(checks nearest package.json to determine whether it is esm or commonJS to decide what to inject either import,export or require and exports)
+
+
+## ESlint
+
+- npx eslint <file>
+- npx eslint <file> --fix

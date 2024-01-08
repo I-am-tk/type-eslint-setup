@@ -1,5 +1,6 @@
-const myArray = [1, 2, 3, 4, 5];
+// const firstName = 'Tk';
+// console.log(`Hello ${firstName}`);
+console.log(`Hello`)
 
-for (const element of myArray) {
-  console.log(element);
-}
+let ids = new Set();
+ids.add(3);
