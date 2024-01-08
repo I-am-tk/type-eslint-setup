@@ -17,3 +17,4 @@
 
 - npx eslint <file>
 - npx eslint <file> --fix
+- eslint -c myconfig.json myfiletotest.js
