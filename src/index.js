@@ -1,6 +1,3 @@
-// const firstName = 'Tk';
-// console.log(`Hello ${firstName}`);
-console.log(`Hello`)
+import add from './add'
 
-let ids = new Set();
-ids.add(3);
+console.log(add(2,3));
