@@ -20,6 +20,8 @@ module.exports = {
         "Promise": "off"
     },
     "plugins": ["react", "react-hooks", "import", "jsx-a11y"],
+
+    // "@typescript-eslint"
     // By default eslint uses Espree parser
     // extends apply the rules specified in eslint:recommended, we can override it in rules
     // "plugin:react/jsx-runtime" is used so that we don't need have to import React in every file
@@ -42,7 +44,9 @@ module.exports = {
         "quotes": [2, "single", {
             "allowTemplateLiterals": true
         }],
+        "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }]
     },
+    parser: "@typescript-eslint/parser",
     // disable adding inline rules
     "noInlineConfig": true,
     "reportUnusedDisableDirectives": true,

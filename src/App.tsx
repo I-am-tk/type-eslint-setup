@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-function getValue(a) {
+function getValue(a: number) {
   return a;
 }
 
