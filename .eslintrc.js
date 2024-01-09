@@ -19,14 +19,13 @@ module.exports = {
         "var2": "readonly",
         "Promise": "off"
     },
-    "plugins": ["react", "react-hooks", "import", "jsx-a11y"],
+    "plugins": ["react", "react-hooks", "import", "jsx-a11y", "@typescript-eslint"],
 
-    // "@typescript-eslint"
     // By default eslint uses Espree parser
     // extends apply the rules specified in eslint:recommended, we can override it in rules
     // "plugin:react/jsx-runtime" is used so that we don't need have to import React in every file
     // Read more here https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html
-    "extends": ["eslint:recommended", "airbnb", "airbnb/hooks", "plugin:react/jsx-runtime"],
+    "extends": ["eslint:recommended", "airbnb", "airbnb/hooks", "plugin:react/jsx-runtime", 'plugin:@typescript-eslint/recommended-type-checked'],
     // "plugin:react/recommended", "plugin:react-hooks/recommended", 
     "parserOptions": {
         // defautl sourceType is script making it module to support import and export
@@ -37,7 +36,10 @@ module.exports = {
         "ecmaFeatures": {
             "jsx": true,
             "impliedStrict": true
-        }
+        },
+        // options for typescript-eslint
+        project: true,
+        tsconfigRootDir: __dirname,
     },
     "rules": {
         // we are able to use these rules directly without having any plugin, because these are [built-in](https://eslint.org/docs/latest/rules/) rules
