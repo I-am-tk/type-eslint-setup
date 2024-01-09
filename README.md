@@ -37,3 +37,8 @@ console.log('bar');
 ```
 
 Read about .eslintignore file
+
+
+## Todo
+
+Typescript setup with React...

@@ -19,9 +19,13 @@ module.exports = {
         "var2": "readonly",
         "Promise": "off"
     },
+    "plugins": ["react", "react-hooks", "import", "jsx-a11y"],
     // By default eslint uses Espree parser
     // extends apply the rules specified in eslint:recommended, we can override it in rules
-    "extends": ["eslint:recommended", "airbnb"],
+    // "plugin:react/jsx-runtime" is used so that we don't need have to import React in every file
+    // Read more here https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html
+    "extends": ["eslint:recommended", "airbnb", "airbnb/hooks", "plugin:react/jsx-runtime"],
+    // "plugin:react/recommended", "plugin:react-hooks/recommended", 
     "parserOptions": {
         // defautl sourceType is script making it module to support import and export
         "sourceType": "module",
@@ -51,5 +55,10 @@ module.exports = {
                 "no-console": "off"
             }
         }
-    ]
+    ],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
 }
